@@ -1,14 +1,39 @@
 import { motion } from "framer-motion";
 
 const categories = [
-  { title: "Birthday Decoration", img: "https://plus.unsplash.com/premium_photo-1677666508757-440206aef403?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { title: "Kids Decoration", img: "https://images.unsplash.com/photo-1732808821250-5a77308223ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGtpZHMlMjBkZWNvcmF0aW9ufGVufDB8fDB8fHww" },
-  { title: "Newborn Welcome", img: "https://images.unsplash.com/photo-1735817699222-35aee080df64?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { title: "Anniversary Decoration", img: "https://plus.unsplash.com/premium_photo-1682092021551-c3d981d5f979?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { title: "Baby Shower", img: "https://images.unsplash.com/photo-1625990462521-a09e6b880d50?q=80&w=1937&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { title: "First Night", img: "https://plus.unsplash.com/premium_photo-1671148880948-0f87a4b28f5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { title: "Festival Celebrations", img: "https://images.unsplash.com/photo-1603228254119-e6a4d095dc59?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { title: "Diwali Celebration", img: "https://images.unsplash.com/photo-1577083753695-e010191bacb5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  {
+    title: "Birthday Decoration",
+    img: "https://plus.unsplash.com/premium_photo-1677666508757-440206aef403?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+
+  {
+    title: "Kids Decoration",
+    img: "https://images.unsplash.com/photo-1732808821250-5a77308223ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGtpZHMlMjBkZWNvcmF0aW9ufGVufDB8fDB8fHww",
+  },
+  {
+    title: "Newborn Welcome",
+    img: "https://images.unsplash.com/photo-1735817699222-35aee080df64?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Anniversary Decoration",
+    img: "https://plus.unsplash.com/premium_photo-1682092021551-c3d981d5f979?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Baby Shower",
+    img: "https://images.unsplash.com/photo-1625990462521-a09e6b880d50?q=80&w=1937&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "First Night",
+    img: "https://plus.unsplash.com/premium_photo-1671148880948-0f87a4b28f5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Festival Celebrations",
+    img: "https://images.unsplash.com/photo-1603228254119-e6a4d095dc59?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Custom Events",
+    img: "https://images.unsplash.com/photo-1559899775-7bab80fe1dd0?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
 ];
 
 const CategoriesSection = () => {
