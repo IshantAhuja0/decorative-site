@@ -87,11 +87,11 @@ const TestimonialSection = () => {
               className="bg-white rounded-2xl shadow-md p-4 hover:shadow-lg transition duration-300 flex flex-col h-full"
             >
               <div className="flex items-center gap-4 mb-3">
-                <img
+                {/* <img
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full object-cover border border-gray-300"
-                />
+                /> */}
                 <div>
                   <h4 className="text-base font-semibold">{testimonial.name}</h4>
                   <p className="text-xs text-gray-500">{testimonial.location}</p>

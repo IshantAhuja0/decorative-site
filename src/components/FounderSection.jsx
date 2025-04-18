@@ -2,15 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 const founders = [
   {
-    name: "Aarav Mehta",
-    role: "Co-Founder & CEO",
-    bio: "Aarav leads the vision and strategy. With 10+ years of experience in tech and business, he's passionate about building scalable solutions.",
+    name: "Ekta Aggarwal",
+    role: "Co-Founder & CDO",
+    bio: "Ekta Aggarwal leads the vision and strategy. With 10+ years of experience in designing and business, he's passionate about building scalable solutions.",
     image: "https://randomuser.me/api/portraits/men/45.jpg"
   },
   {
-    name: "Isha Kapoor",
+    name: "Ritika Garg",
     role: "Co-Founder & CTO",
-    bio: "Isha drives the technical architecture. She's a full-stack expert and loves building powerful digital products with real impact.",
+    bio: "Ritika Garg drives the technical architecture. She's a full-stack expert and loves building powerful digital products with real impact.",
     image: "https://randomuser.me/api/portraits/women/65.jpg"
   }
 ];

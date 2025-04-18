@@ -8,7 +8,9 @@ import reelVideo6 from "../assets/reels/reel6.mp4";
 import reelVideo4 from "../assets/reels/reel4.mp4"; 
 // import reelVideo1 from "../assets/reels/reel1.mp4"; 
 import { motion } from "framer-motion";
-
+function reelClicked(e){
+console.log(e)
+}
 const reels = [
   {
     title: "Wedding Decor Highlights",
@@ -49,6 +51,7 @@ const ReelsSection = () => {
         <h2 className="text-3xl font-bold text-center mb-10">🔥 Trending Reels</h2>
   
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
       {reels.map((video, index) => (
         <DelayedVideo key={index} videoSrc={video.videoUrl} delay={index * 2000} count={index}/>
       ))}
@@ -87,6 +90,7 @@ const DelayedVideo = ({ videoSrc, delay ,count}) => {
       preload="auto"
       muted
       loop
+      onClick={(e)=>reelClicked(e.target)}
       playsInline
     >
       <source src={videoSrc} type="video/mp4" />

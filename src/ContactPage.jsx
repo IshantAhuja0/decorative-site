@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 const ContactPage = () => {
+  let info={
+    phone:'123456789',
+    email:'decorish@mail.com',
+    address:'sirsa'
+  }
   const [formData, setFormData] = useState({ name: '', phone: '', email: '' , time:''});
 
   const handleChange = (e) =>
@@ -88,12 +93,12 @@ const ContactPage = () => {
         >
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Contact Us</h2>
           <div className="text-gray-700 text-lg space-y-4">
-            <p><strong>📞 Phone:</strong> +91 98765 43210</p>
-            <p><strong>✉️ Email:</strong> support@yourcompany.com</p>
-            <p><strong>🏢 Address:</strong> 123 Tech Street, Bangalore, India</p>
+            <p><strong>📞 Phone:</strong> {info.phone}</p>
+            <p><strong>✉️ Email:</strong> {info.email}</p>
+            <p><strong>🏢 Address:</strong>  {info.address}</p>
             <div className="mt-6">
               <a
-                href="https://wa.me/919876543210"
+      href={`https://wa.me/91${info.phone}`} 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-700 text-white px-5 py-3 rounded-xl hover:bg-green-600 transition duration-300"
