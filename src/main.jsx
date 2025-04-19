@@ -11,6 +11,7 @@ import About from "./main components/About.jsx";
 import ContactPage from "./main components/ContactPage.jsx";
 import Home from "./main components/Home.jsx";
 import Services from "./main components/Services.jsx";
+import NotFound from "./main components/NotFound.jsx";
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} >
@@ -19,7 +20,7 @@ const router=createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="contact" element={<ContactPage />} />
        <Route path="/services" element={<Services />} />
-      {/* <Route path="*" element={<NotFound />} /> Catch-all 404 route  */}
+      <Route path="*" element={<NotFound/>} /> Catch-all 404 route 
     </Route>
   )
 )

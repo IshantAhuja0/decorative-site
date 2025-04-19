@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react';
-
+import { Navigate, useNavigate } from 'react-router-dom';
 const ServicesRender = ({ obj }) => {
+const nav=useNavigate()
+  function goContact(){
+nav('/contact');
+  }
   return (
     <div className="space-y-16 py-12 px-4 sm:px-8 bg-purple-50 mt-16">
       {obj.map((service, index) => (
@@ -47,7 +51,7 @@ const ServicesRender = ({ obj }) => {
     </div>
 
     <div className="mt-12">
-      <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 animate-fade-in-up">
+      <button onClick={goContact} className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 animate-fade-in-up">
         Book a Service
       </button>
     </div>
@@ -75,7 +79,7 @@ const CategoryCard = ({ data, reverse }) => {
   }, []);
 
   const previewImages = [
-    data.img, data.img, data.img, data.img, data.img, data.img,
+    data.img, data.img, data.img, data.img
   ]; // using the same image as filler
 
   return (
@@ -104,13 +108,13 @@ const CategoryCard = ({ data, reverse }) => {
       </div>
 
       {/* Section 2 - Preview Grid */}
-      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      <div className="mt-10 grid grid-cols-2 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {previewImages.map((img, idx) => (
           <img
             key={idx}
             src={img}
             alt={`Preview ${idx + 1}`}
-            className="w-full h-32 sm:h-40 object-cover rounded-xl shadow-md"
+            className="w-full h-40 sm:h-64 object-cover rounded-xl shadow-md"
           />
         ))}
       </div>
@@ -134,10 +138,6 @@ const CategoryCard = ({ data, reverse }) => {
         `}
       </style>
     </section>
-
-///why choose us
-
-
 </div>
   );
 };

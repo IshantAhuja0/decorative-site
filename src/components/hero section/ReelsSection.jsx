@@ -43,7 +43,6 @@ const reels = [
   },
 ];
 
-
 const ReelsSection = () => {
   return (
       <div className="px-4 py-10 max-w-6xl mx-auto">
