@@ -6,10 +6,11 @@ import {
 } from "react-router-dom";
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Home from './Home.jsx'
-import About from './About.jsx'
 import App from './App.jsx'
-import ContactPage from "./ContactPage.jsx";
+import About from "./main components/About.jsx";
+import ContactPage from "./main components/ContactPage.jsx";
+import Home from "./main components/Home.jsx";
+import Services from "./main components/Services.jsx";
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} >
@@ -17,8 +18,8 @@ const router=createBrowserRouter(
       <Route path="home" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<ContactPage />} />
-      {/* <Route path="/moviepage" element={<MoviePage />} />
-      <Route path="*" element={<NotFound />} /> Catch-all 404 route */}
+       <Route path="/services" element={<Services />} />
+      {/* <Route path="*" element={<NotFound />} /> Catch-all 404 route  */}
     </Route>
   )
 )

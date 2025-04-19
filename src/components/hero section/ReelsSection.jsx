@@ -1,12 +1,11 @@
 import React, { useRef } from "react";
 import { useEffect } from "react";
-import reelVideo1 from "../assets/reels/reel1.mp4"; 
-import reelVideo2 from "../assets/reels/reel2.mp4"; 
-import reelVideo3 from "../assets/reels/reel3.mp4"; 
-import reelVideo5 from "../assets/reels/reel5.mp4"; 
-import reelVideo6 from "../assets/reels/reel6.mp4"; 
-import reelVideo4 from "../assets/reels/reel4.mp4"; 
-// import reelVideo1 from "../assets/reels/reel1.mp4"; 
+import reelVideo1 from "../../assets/reels/reel1.mp4"; 
+import reelVideo2 from "../../assets/reels/reel2.mp4"; 
+import reelVideo3 from "../../assets/reels/reel3.mp4"; 
+import reelVideo4 from "../../assets/reels/reel4.mp4"; 
+import reelVideo5 from "../../assets/reels/reel5.mp4"; 
+import reelVideo6 from "../../assets/reels/reel6.mp4"; 
 import { motion } from "framer-motion";
 function reelClicked(e){
 console.log(e)
