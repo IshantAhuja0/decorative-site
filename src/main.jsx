@@ -7,11 +7,19 @@ import {
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import About from "./main components/About.jsx";
-import ContactPage from "./main components/ContactPage.jsx";
+// import About from "./main components/About.jsx";
+// import ContactPage from "./main components/ContactPage.jsx";
 import Home from "./main components/Home.jsx";
 import Services from "./main components/Services.jsx";
-import NotFound from "./main components/NotFound.jsx";
+// import NotFound from "./main components/NotFound.jsx";
+import { lazy } from "react";
+
+//  const Home=lazy(()=>import('./main components/Home.jsx'))
+ const About=lazy(()=>import('./main components/About.jsx'))
+ const ContactPage=lazy(()=>import('./main components/ContactPage.jsx'))
+//  const Services=lazy(()=>import('./main components/Services.jsx'))
+ const NotFound=lazy(()=>import('./main components/NotFound.jsx'))
+
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} >

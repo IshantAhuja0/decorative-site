@@ -50,7 +50,7 @@ const ContactPage = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-amber-950 focus:outline-none"
+                className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
               />
             </div>
             <div>
@@ -61,7 +61,7 @@ const ContactPage = () => {
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-amber-950 focus:outline-none"
+                className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
               />
             </div>
             <div>
@@ -72,12 +72,12 @@ const ContactPage = () => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-amber-950 focus:outline-none"
+                className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-gray-900 text-white py-3 rounded-xl hover:bg-amber-950 transition duration-300"
+              className="w-full bg-gray-900 text-white py-3 rounded-xl hover:bg-gray-700 transition duration-300"
             >
               Submit
             </button>
