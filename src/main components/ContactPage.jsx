@@ -12,7 +12,7 @@ const ContactPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = async(e) => {
-    formData.email="hii";
+    // formData.email="hii";
     e.preventDefault();
     console.log('Submitted:', formData);
     const response = await fetch('http://localhost:5000/api/book', {
@@ -34,7 +34,7 @@ const ContactPage = () => {
         className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10"
       >
         {/* Appointment Form */}
-        <motion.div
+        {/* <motion.div
           initial={{ x: -30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -82,7 +82,91 @@ const ContactPage = () => {
               Submit
             </button>
           </form>
-        </motion.div>
+        </motion.div> */}
+
+
+<motion.div
+  initial={{ x: -30, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ delay: 0.2 }}
+  className="bg-white p-8 rounded-2xl shadow-xl"
+>
+  <h2 className="text-3xl font-bold mb-6 text-gray-800">Book an Appointment</h2>
+  <form onSubmit={handleSubmit} className="space-y-5">
+    <div>
+      <label className="block text-sm font-medium">Full Name</label>
+      <input
+        type="text"
+        name="name"
+        required
+        value={formData.name}
+        onChange={handleChange}
+        className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
+      />
+    </div>
+    <div>
+      <label className="block text-sm font-medium">Phone Number</label>
+      <input
+        type="tel"
+        name="phone"
+        required
+        value={formData.phone}
+        onChange={handleChange}
+        pattern="\d{10}"
+        title="Phone number must be exactly 10 digits"
+        className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
+      />
+    </div>
+    <div>
+      <label className="block text-sm font-medium">Email</label>
+      <input
+        type="email"
+        name="email"
+        required
+        value={formData.email}
+        onChange={handleChange}
+        className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
+      />
+    </div>
+    <div>
+      <label className="block text-sm font-medium">Event Type</label>
+      <select
+        name="eventType"
+        required
+        value={formData.eventType}
+        onChange={handleChange}
+        className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
+      >
+        <option value="">Select an event</option>
+        <option value="Birthday">Birthday</option>
+        <option value="Anniversary">Anniversary</option>
+        <option value="Custom">Custom</option>
+      </select>
+    </div>
+
+    {formData.eventType === "Custom" && (
+      <div>
+        <label className="block text-sm font-medium">Custom Event Name</label>
+        <input
+          type="text"
+          name="customEvent"
+          required
+          value={formData.customEvent}
+          onChange={handleChange}
+          className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
+        />
+      </div>
+    )}
+
+    <button
+      type="submit"
+      className="w-full bg-gray-900 text-white py-3 rounded-xl hover:bg-gray-700 transition duration-300"
+    >
+      Submit
+    </button>
+  </form>
+</motion.div>
+
 
         {/* Contact Info */}
         <motion.div
@@ -93,7 +177,7 @@ const ContactPage = () => {
         >
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Contact Us</h2>
           <div className="text-gray-700 text-lg space-y-4">
-            <p><strong>📞 Phone:</strong> {info.phone}</p>
+            <p><strong>📞 Phone:</strong> <a href={`tel:${info.phone}`}>{info.phone}</a></p>
             <p><strong>✉️ Email:</strong> {info.email}</p>
             <p><strong>🏢 Address:</strong>  {info.address}</p>
             <div className="mt-6">
