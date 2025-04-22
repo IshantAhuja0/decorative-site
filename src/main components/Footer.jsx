@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-
+import { NavLink } from 'react-router-dom';
 const Footer = (props) => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10">
@@ -19,10 +19,10 @@ const Footer = (props) => {
           <div>
             <h3 className="text-md font-semibold text-white mb-2">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white">Home</a></li>
-              <li><a href="#" className="hover:text-white">About</a></li>
-              <li><a href="#" className="hover:text-white">Services</a></li>
-              <li><a href="#" className="hover:text-white">Contact</a></li>
+              <li><NavLink to="/home" className="hover:text-white">Home</NavLink></li>
+              <li><NavLink to="/about" className="hover:text-white">About</NavLink></li>
+              <li><NavLink to="/services" className="hover:text-white">Services</NavLink></li>
+              <li><NavLink to="/contact" className="hover:text-white">Contact</NavLink></li>
             </ul>
           </div>
 
@@ -40,10 +40,10 @@ const Footer = (props) => {
           <div>
             <h3 className="text-md font-semibold text-white mb-2">Follow Us</h3>
             <div className="flex gap-4 mt-2">
-              <a href="#" className="text-gray-400 hover:text-white"><FaFacebookF /></a>
-              <a href="#" className="text-gray-400 hover:text-white"><FaTwitter /></a>
-              <a href="#" className="text-gray-400 hover:text-white"><FaInstagram /></a>
-              <a href="#" className="text-gray-400 hover:text-white"><FaLinkedinIn /></a>
+              <NavLink href="#" className="text-gray-400 hover:text-white"><FaFacebookF /></NavLink>
+              <NavLink href="#" className="text-gray-400 hover:text-white"><FaTwitter /></NavLink>
+              <NavLink href="https://www.instagram.com/decorish_events/" className="text-gray-400 hover:text-white"><FaInstagram /></NavLink>
+              <NavLink href="#" className="text-gray-400 hover:text-white"><FaLinkedinIn /></NavLink>
             </div>
           </div>
         </div>

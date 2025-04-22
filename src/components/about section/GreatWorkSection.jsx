@@ -1,20 +1,7 @@
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-const today = new Date();
-const baseDate = new Date('2024-01-01'); // Your starting date
-const daysPassed = Math.floor((today - baseDate) / (1000 * 60 * 60 * 24));
-
-// Update numbers based on days passed
-const stats = [
-  { label: 'Orders Fulfilled', value: 860 + daysPassed * 2 }, // +2 orders per day
-  { label: 'Happy Customers', value: 800 + daysPassed * 2 }, // +1.5 customers per day
-  { label: 'Projects Completed', value: 120 + Math.floor(daysPassed / 10) }, // 1 project every 10 days
-  { label: 'Years of Excellence', value: today.getFullYear() - 2023 },
-];
-
-
-const GreatWorkSection = () => {
+const GreatWorkSection = ({ stats }) => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const [counts, setCounts] = useState(stats.map(() => 0));
 
@@ -49,10 +36,11 @@ const GreatWorkSection = () => {
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-800">
-        What We’ve Accomplished With You
+          What We’ve Accomplished With You
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Our journey has been incredible, and we're proud of what we’ve achieved with your support.
+          Our journey has been incredible, and we're proud of what we’ve
+          achieved with your support.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

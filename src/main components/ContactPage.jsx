@@ -1,28 +1,62 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import Popup from '../components/Popup';
+
 const ContactPage = () => {
-  let info={
-    phone:'123456789',
-    email:'decorish@mail.com',
-    address:'sirsa'
-  }
-  const [formData, setFormData] = useState({ name: '', phone: '', email: '' , time:''});
+  let info = {
+    phone: '1234567890',
+    email: 'decorish@mail.com',
+    address: 'Sirsa',
+  };
 
-  const handleChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    time: '',
+    eventType: '',
+    customEvent: ''
+  });
 
-  const handleSubmit = async(e) => {
-    // formData.email="hii";
+  const [popupMsg, setPopupMsg] = useState(null);
+  const [pop,setPop]=useState(true)
+  useEffect(() => {
+    if (popupMsg) {
+      const timer = setTimeout(() => {
+        setPopupMsg(null);
+      }, 3000);
+      return () => clearTimeout(timer); // cleanup
+    }
+  }, [popupMsg]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitted:', formData);
-    const response = await fetch('http://localhost:5000/api/book', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-  
-    const data = await response.json();
-    alert(data.message);
+
+    // Validate phone number
+    if (!/^\d{10}$/.test(formData.phone)) {
+      setPopupMsg({ message: "Phone number must be exactly 10 digits." });
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      setPopupMsg({ message: "✅ Your appointment has been successfully booked. See you soon!" });
+    } catch (error) {
+      console.error(error+"hii");
+      setPop(false);
+      setPopupMsg({ message: "❌ Oops! There was an issue booking your appointment. Please try again later."});
+    }
   };
 
   return (
@@ -33,8 +67,9 @@ const ContactPage = () => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10"
       >
-        {/* Appointment Form */}
-        {/* <motion.div
+
+        {/* Booking Form */}
+        <motion.div
           initial={{ x: -30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -53,6 +88,7 @@ const ContactPage = () => {
                 className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
               />
             </div>
+
             <div>
               <label className="block text-sm font-medium">Phone Number</label>
               <input
@@ -61,9 +97,12 @@ const ContactPage = () => {
                 required
                 value={formData.phone}
                 onChange={handleChange}
+                pattern="\d{10}"
+                title="Phone number must be exactly 10 digits"
                 className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
               />
             </div>
+
             <div>
               <label className="block text-sm font-medium">Email</label>
               <input
@@ -75,6 +114,37 @@ const ContactPage = () => {
                 className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
               />
             </div>
+
+            <div>
+              <label className="block text-sm font-medium">Event Type</label>
+              <select
+                name="eventType"
+                required
+                value={formData.eventType}
+                onChange={handleChange}
+                className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
+              >
+                <option value="">Select an event</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Anniversary">Anniversary</option>
+                <option value="Custom">Custom</option>
+              </select>
+            </div>
+
+            {formData.eventType === "Custom" && (
+              <div>
+                <label className="block text-sm font-medium">Custom Event Name</label>
+                <input
+                  type="text"
+                  name="customEvent"
+                  required
+                  value={formData.customEvent}
+                  onChange={handleChange}
+                  className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
+                />
+              </div>
+            )}
+
             <button
               type="submit"
               className="w-full bg-gray-900 text-white py-3 rounded-xl hover:bg-gray-700 transition duration-300"
@@ -82,91 +152,10 @@ const ContactPage = () => {
               Submit
             </button>
           </form>
-        </motion.div> */}
 
+          {popupMsg && <Popup msg={popupMsg.message} pop={pop}/>}
 
-<motion.div
-  initial={{ x: -30, opacity: 0 }}
-  animate={{ x: 0, opacity: 1 }}
-  transition={{ delay: 0.2 }}
-  className="bg-white p-8 rounded-2xl shadow-xl"
->
-  <h2 className="text-3xl font-bold mb-6 text-gray-800">Book an Appointment</h2>
-  <form onSubmit={handleSubmit} className="space-y-5">
-    <div>
-      <label className="block text-sm font-medium">Full Name</label>
-      <input
-        type="text"
-        name="name"
-        required
-        value={formData.name}
-        onChange={handleChange}
-        className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
-      />
-    </div>
-    <div>
-      <label className="block text-sm font-medium">Phone Number</label>
-      <input
-        type="tel"
-        name="phone"
-        required
-        value={formData.phone}
-        onChange={handleChange}
-        pattern="\d{10}"
-        title="Phone number must be exactly 10 digits"
-        className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
-      />
-    </div>
-    <div>
-      <label className="block text-sm font-medium">Email</label>
-      <input
-        type="email"
-        name="email"
-        required
-        value={formData.email}
-        onChange={handleChange}
-        className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
-      />
-    </div>
-    <div>
-      <label className="block text-sm font-medium">Event Type</label>
-      <select
-        name="eventType"
-        required
-        value={formData.eventType}
-        onChange={handleChange}
-        className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
-      >
-        <option value="">Select an event</option>
-        <option value="Birthday">Birthday</option>
-        <option value="Anniversary">Anniversary</option>
-        <option value="Custom">Custom</option>
-      </select>
-    </div>
-
-    {formData.eventType === "Custom" && (
-      <div>
-        <label className="block text-sm font-medium">Custom Event Name</label>
-        <input
-          type="text"
-          name="customEvent"
-          required
-          value={formData.customEvent}
-          onChange={handleChange}
-          className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
-        />
-      </div>
-    )}
-
-    <button
-      type="submit"
-      className="w-full bg-gray-900 text-white py-3 rounded-xl hover:bg-gray-700 transition duration-300"
-    >
-      Submit
-    </button>
-  </form>
-</motion.div>
-
+        </motion.div>
 
         {/* Contact Info */}
         <motion.div
@@ -179,10 +168,10 @@ const ContactPage = () => {
           <div className="text-gray-700 text-lg space-y-4">
             <p><strong>📞 Phone:</strong> <a href={`tel:${info.phone}`}>{info.phone}</a></p>
             <p><strong>✉️ Email:</strong> {info.email}</p>
-            <p><strong>🏢 Address:</strong>  {info.address}</p>
+            <p><strong>🏢 Address:</strong> {info.address}</p>
             <div className="mt-6">
               <a
-      href={`https://wa.me/91${info.phone}`} 
+                href={`https://wa.me/91${info.phone}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-700 text-white px-5 py-3 rounded-xl hover:bg-green-600 transition duration-300"
