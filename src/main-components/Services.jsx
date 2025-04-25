@@ -1,5 +1,5 @@
 import React from 'react';
-import ServicesRender from '../components/services section/servicesRender';
+import ServicesRender from '../components/services-section/ServicesRender';
 
 function Services() {
   const categories = [
