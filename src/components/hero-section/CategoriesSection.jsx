@@ -48,11 +48,11 @@ const CategoriesSection = () => {
 
       <div className="grid place-items-center gap-6 grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
         {categories.map((cat, idx) => (
-          <HashLink to={`/services#${cat.title}`}>
+          <HashLink to={`/services#${cat.title}`} key={idx}>
 
           <motion.div
           
-            key={idx}
+            
             className="flex flex-col items-center w-32 sm:w-36 md:w-40"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

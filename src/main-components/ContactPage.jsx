@@ -50,14 +50,27 @@ const ContactPage = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-
-      const data = await response.json();
-      setPopupMsg({ message: "✅ Your appointment has been successfully booked. See you soon!" });
+    
+      // ✅ Check response status and content type
+      const isJson = response.headers.get('content-type')?.includes('application/json');
+    
+      if (!response.ok) {
+        throw new Error(`Server responded with status ${response.status}`);
+      }
+    
+      const data = isJson ? await response.json() : null;
+    
+      setPopupMsg({
+        message: "✅ Your appointment has been successfully booked. See you soon!"
+      });
     } catch (error) {
-      console.error(error+"hii");
+      console.error("❌ Error submitting form:", error);
       setPop(false);
-      setPopupMsg({ message: "❌ Oops! There was an issue booking your appointment. Please try again later."});
+      setPopupMsg({
+        message: "❌ Oops! There was an issue booking your appointment. Please try again later."
+      });
     }
+    
   };
 
   return (

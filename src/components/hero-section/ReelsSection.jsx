@@ -39,10 +39,8 @@ const reels = [
 const ReelsSection = () => {
   return (
       <div className="px-4 py-2  mx-0 bg-gradient-to-b from-[#ece4fc]  via-[#f1ebff] to-[#fdfbff]">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-purple-700 mb-2 pb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-center text-purple-700 mb-2">
+              <h2 className="text-3xl sm:text-4xl font-bold text-center text-purple-700 mb-2 pb-12">
               🔥 Trending Reels
-      </h2>
       </h2>
   
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
