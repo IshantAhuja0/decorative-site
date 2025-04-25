@@ -19,9 +19,9 @@ import { lazy } from "react";
 
 //  const Home=lazy(()=>import('./main components/Home.jsx'))
  const About=lazy(()=>import('./main-components/About.jsx'))
- const ContactPage=lazy(()=>import('./main-components/ContactPage.js'))
+ const ContactPage=lazy(()=>import('./main-components/ContactPage.jsx'))
 //  const Services=lazy(()=>import('./main components/Services.jsx'))
- const NotFound=lazy(()=>import('./main-components/NotFound.js'))
+ const NotFound=lazy(()=>import('./main-components/NotFound.jsx'))
 // const nav=useNavigate();
 const router=createBrowserRouter(
   createRoutesFromElements(
