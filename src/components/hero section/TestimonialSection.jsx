@@ -37,42 +37,7 @@ const testimonials = [
     location: "Bangalore, India",
     image: "https://randomuser.me/api/portraits/men/51.jpg"
   },
-  {
-    name: "Amit Sharma",
-    comment: "Amazing service! Totally satisfied with the experience.",
-    location: "Mumbai, India",
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
-  },
-  {
-    name: "Sara Khan",
-    comment: "Quick delivery and great support. Highly recommend!",
-    location: "Delhi, India",
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
-  },
-  {
-    name: "John Doe",
-    comment: "Very professional and helpful team. 5 stars!",
-    location: "Bangalore, India",
-    image: "https://randomuser.me/api/portraits/men/51.jpg"
-  },
-  {
-    name: "Amit Sharma",
-    comment: "Amazing service! Totally satisfied with the experience.",
-    location: "Mumbai, India",
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
-  },
-  {
-    name: "Sara Khan",
-    comment: "Quick delivery and great support. Highly recommend!",
-    location: "Delhi, India",
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
-  },
-  {
-    name: "John Doe",
-    comment: "Very professional and helpful team. 5 stars!",
-    location: "Bangalore, India",
-    image: "https://randomuser.me/api/portraits/men/51.jpg"
-  }
+
 ];
 
 const TestimonialSection = () => {
@@ -80,7 +45,7 @@ const TestimonialSection = () => {
     <section className="py-12 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-10">What Our Customers Say</h2>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}

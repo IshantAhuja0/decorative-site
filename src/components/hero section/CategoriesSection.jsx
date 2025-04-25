@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import {HashLink} from 'react-router-hash-link'
 const categories = [
   {
     title: "Birthday Decoration",
@@ -48,7 +48,10 @@ const CategoriesSection = () => {
 
       <div className="grid place-items-center gap-6 grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
         {categories.map((cat, idx) => (
+          <HashLink to={`/services#${cat.title}`}>
+
           <motion.div
+          
             key={idx}
             className="flex flex-col items-center w-32 sm:w-36 md:w-40"
             initial={{ opacity: 0, y: 40 }}
@@ -65,6 +68,7 @@ const CategoriesSection = () => {
               {cat.title}
             </p>
           </motion.div>
+          </HashLink>
         ))}
       </div>
     </div>

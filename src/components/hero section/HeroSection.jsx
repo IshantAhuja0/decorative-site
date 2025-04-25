@@ -26,7 +26,7 @@ const HeroSection = () => {
           <div className="absolute inset-0 bg-gray-200 animate-pulse z-0 " />
         )}
 
-        <div className="absolute inset-0 bg-white/40 backdrop-brightness-90 z-10"></div>
+        <div className="absolute inset-0 bg-white/40 backdrop-brightness-90 z-0"></div>
 
         <div className="relative z-20 text-center px-4 max-w-2xl text-amber-950">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fadeInUp">

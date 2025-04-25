@@ -2,8 +2,11 @@ import {
   Route,
   RouterProvider,
   createBrowserRouter,
-  createRoutesFromElements
+  createRoutesFromElements,
+  Navigate,
+  useNavigate
 } from "react-router-dom";
+
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -19,12 +22,12 @@ import { lazy } from "react";
  const ContactPage=lazy(()=>import('./main components/ContactPage.jsx'))
 //  const Services=lazy(()=>import('./main components/Services.jsx'))
  const NotFound=lazy(()=>import('./main components/NotFound.jsx'))
-
+// const nav=useNavigate();
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} >
       <Route index element={<Home />} />
-      <Route path="home" element={<Home />} />
+      <Route path="home" element={<Navigate to="/"/>} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<ContactPage />} />
        <Route path="/services" element={<Services />} />

@@ -89,7 +89,7 @@ const CategoryCard = ({ data, reverse }) => {
   const previewImages = [data.img, data.img, data.img, data.img];
 
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden" id={data.title}>
       <div className="max-w-5xl mx-auto space-y-8">
         <div className="flex justify-center items-center">
           <div

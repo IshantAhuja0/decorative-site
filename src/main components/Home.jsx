@@ -14,7 +14,7 @@ export default function Home(props) {
   <ReelsSection/>
   <TestimonialSection/>
   <FloatingWhatsapp  whatsapp={whatsappNumber}/>
-  <InstagramReel/>
+  {/* <InstagramReel/> */}
       </>
     )
 }

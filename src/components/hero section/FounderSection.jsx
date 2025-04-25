@@ -30,13 +30,13 @@ const cardVariants = {
 
 const FounderSection = () => {
   return (
-<section className="relative py-20 bg-gradient-to-br from-indigo-200 via-purple-100 to-pink-200 animate-gradient bg-[length:400%_400%]">
+<section className="relative py-30 bg-gradient-to-br from-indigo-200 via-purple-100 to-pink-200 animate-gradient bg-[length:400%_400%]">
       {/* Overlay */}
       <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-0" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">Meet the Founders</h2>
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Meet the Founders</h2>
 
         <div className="space-y-24">
           {founders.map((founder, idx) => (

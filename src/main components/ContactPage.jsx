@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState,useEffect } from 'react';
 import Popup from '../components/Popup';
+import GoogleMapPreview from '../components/GoogleMapPreview';
 
 const ContactPage = () => {
   let info = {
@@ -15,7 +16,7 @@ const ContactPage = () => {
     email: '',
     time: '',
     eventType: '',
-    customEvent: ''
+    date: ''
   });
 
   const [popupMsg, setPopupMsg] = useState(null);
@@ -108,7 +109,7 @@ const ContactPage = () => {
               <input
                 type="email"
                 name="email"
-                required
+                
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
@@ -138,12 +139,24 @@ const ContactPage = () => {
                   type="text"
                   name="customEvent"
                   required
-                  value={formData.customEvent}
+                  value={formData.eventType}
                   onChange={handleChange}
                   className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
                 />
               </div>
             )}
+
+            <div>
+              <label className="block text-sm font-medium">Date of Event</label>
+              <input
+                type="date"
+                name="date"
+                required
+                value={formData.date}
+                onChange={handleChange}
+                className="w-full mt-1 p-3 border rounded-xl focus:ring-2 focus:ring-gray-950 focus:outline-none"
+              />
+            </div>
 
             <button
               type="submit"
@@ -164,6 +177,7 @@ const ContactPage = () => {
           transition={{ delay: 0.3 }}
           className="bg-gray-100 p-8 rounded-2xl shadow-xl"
         >
+<div>
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Contact Us</h2>
           <div className="text-gray-700 text-lg space-y-4">
             <p><strong>📞 Phone:</strong> <a href={`tel:${info.phone}`}>{info.phone}</a></p>
@@ -184,7 +198,17 @@ const ContactPage = () => {
               </a>
             </div>
           </div>
+  
+</div>
+<div className='mt-10'>
+
+          <h2 className="text-3xl font-bold  text-gray-800">Location</h2>
+          <div className="pt-10">
+<GoogleMapPreview/>
+</div>
+          </div>
         </motion.div>
+        
       </motion.div>
     </div>
   );

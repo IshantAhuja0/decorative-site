@@ -8,6 +8,7 @@ function App() {
 
   let navDetails={
     name:"Decorish",
+    lastName:"Events",
     logo:"https://cdn4.iconfinder.com/data/icons/nature-solid-icons-vol-3/72/133-512.png",
     instagram:"https://www.instagram.com/decorish_events/"
   }
