@@ -1,6 +1,6 @@
 ## 🎬 Watch Demo
 
-[![Watch the demo](./src/assets/previewPhotos/decorish-video-button.png)]([https://drive.google.com/file/d/your-video-id/view?usp=sharing](https://drive.google.com/file/d/1POoMxZqlAXwMaEO5jbJ4_-MvwadsS2Lw/view?usp=drive_link))
+[![Watch the demo](./src/assets/previewPhotos/decorish-video-button.png)](https://drive.google.com/file/d/1POoMxZqlAXwMaEO5jbJ4_-MvwadsS2Lw/view?usp=drive_link)
 ![Alt text](src/assets/previewPhotos/photo1.png)
 ![Alt text](src/assets/previewPhotos/photo2.png)
 ![Alt text](src/assets/previewPhotos/photo3.png)
