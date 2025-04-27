@@ -1,19 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-const founders = [
-  {
-    name: "Ekta Aggarwal",
-    role: "Co-Founder & CDO",
-    bio: "Ekta Aggarwal leads the vision and strategy. With 10+ years of experience in designing and business, he's passionate about building scalable solutions.",
-    image: "https://randomuser.me/api/portraits/men/45.jpg"
-  },
-  {
-    name: "Ritika Garg",
-    role: "Co-Founder & CTO",
-    bio: "Ritika Garg drives the technical architecture. She's a full-stack expert and loves building powerful digital products with real impact.",
-    image: "https://randomuser.me/api/portraits/women/65.jpg"
-  }
-];
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -28,9 +14,10 @@ const cardVariants = {
   })
 };
 
-const FounderSection = () => {
+const FounderSection = ({ stats }) => {
+  let founders = stats;
   return (
-<section className="relative py-30 bg-gradient-to-br from-indigo-200 via-purple-100 to-pink-200 animate-gradient bg-[length:400%_400%]">
+    <section className="relative py-30 pb-22 bg-gradient-to-b from-indigo-200 via-purple-100 to-pink-200 animate-gradient bg-[length:400%_400%]">
       {/* Overlay */}
       <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-0" />
 
@@ -42,9 +29,7 @@ const FounderSection = () => {
           {founders.map((founder, idx) => (
             <motion.div
               key={idx}
-              className={`flex flex-col-reverse md:flex-row items-center gap-12 ${
-                idx % 2 !== 0 ? 'md:flex-row-reverse' : ''
-              }`}
+              className={`flex flex-col-reverse md:flex-row items-center gap-12 ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
               custom={idx}
               initial="hidden"
               whileInView="visible"
@@ -52,14 +37,16 @@ const FounderSection = () => {
               variants={cardVariants}
             >
               {/* Image */}
-              <div className="w-full md:w-1/2 relative group">
-                <div className="overflow-hidden rounded-2xl shadow-xl">
-                  <img
-                    src={founder.image}
-                    alt={founder.name}
-                    className="w-full h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
+              <div className="w-full md:w-1/2 relative group overflow-hidden rounded-2xl shadow-xl">
+                <img
+                  src={founder.image}
+                  alt={founder.name}
+                  className="w-full rounded-xl h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                  style={{
+                    maxHeight: '500px', // Allowing higher height for large screens
+                    objectFit: 'contain' // Ensures the full image fits in the container without cropping
+                  }}
+                />
               </div>
 
               {/* Details */}

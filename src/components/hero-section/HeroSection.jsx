@@ -34,11 +34,11 @@ const HeroSection = () => {
 
         {/* Text content */}
         <div className="relative z-20 text-center px-4 max-w-2xl text-amber-950">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fadeInUp">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fadeInUp">
             Turning moments into unforgettable experiences
           </h1>
-          <p className="text-lg md:text-xl animate-fadeInUp animation-delay-200">
-            —your event, our expertise!
+          <p className="text-2xl md:text-2xl font-medium animate-fadeInUp animation-delay-200">
+            —Your event, our Expertise!
           </p>
           {/* Optional CTA Button */}
           {/* 

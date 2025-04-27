@@ -6,7 +6,7 @@ import ReelsSection from '../components/hero-section/ReelsSection'
 import TestimonialSection from "../components/hero-section/TestimonialSection"
 import InstagramReel from '../components/hero-section/InstagramReel'
 export default function Home(props) {
- const whatsappNumber=123456789;
+ const whatsappNumber=8168504374;
     return (
       <>
   <HeroSection/>

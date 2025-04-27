@@ -5,9 +5,9 @@ import GoogleMapPreview from '../components/GoogleMapPreview';
 
 const ContactPage = () => {
   let info = {
-    phone: '1234567890',
+    phone: '8168504374',  
     email: 'decorish@mail.com',
-    address: 'Sirsa',
+    address: 'Sirsa - 125055, Haryana',
   };
 
   const [formData, setFormData] = useState({
