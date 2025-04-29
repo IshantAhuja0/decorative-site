@@ -11,32 +11,54 @@ Welcome to the  Decorish Events Solutions website repository!
 This is a fully responsive and elegant website that provide event decoration services — including birthdays, anniversaries, farewells, and other celebrations.
 
 🌟 It is designed to deliver a professional, modern, and user-friendly experience.
-
+usable components 
 📂 Project Structure
+# 🎉 Decorish Events Web App
 
-src/
-│
-├── assets/               # Images, videos, and other assets
-├── components/           # Reusable components (hero section, about section, services section)
-│    ├── about-section/
-│    ├── hero-section/
-│    ├── services-section/
-│    ├── GoogleMapPreview.jsx
-│    └── Popup.jsx
-│
-├── main-components/      # Main pages (About, Services, Contact, Home, Navbar, Footer)
-│    ├── About.jsx
-│    ├── ContactPage.jsx
-│    ├── Footer.jsx
-│    ├── Home.jsx
-│    ├── Navbar.jsx
-│    ├── NotFound.jsx
-│    └── Services.jsx
-│
-├── App.jsx                # App routes and layout
-├── App.css                # Global styles
-├── index.css              # Tailwind and custom styles
-└── main.jsx               # Entry point
+Welcome to the **Decorish Events Solutions** website repository!  
+This is a fully responsive and elegant website providing event decoration services — including birthdays, anniversaries, farewells, and other celebrations.
+
+🌟 Designed to deliver a professional, modern, and user-friendly experience.
+
+---
+
+## 📂 Project Structure
+
+<project root="src/">
+  <folder name="assets/">
+    <!-- Images, videos, and other static assets -->
+  </folder>
+  <folder name="components/">
+    <!-- Reusable sections like Hero, About, Services -->
+    <folder name="about-section/" />
+    <folder name="hero-section/" />
+    <folder name="services-section/" />
+    <file name="GoogleMapPreview.jsx" />
+    <file name="Popup.jsx" />
+  </folder>
+  <folder name="main-components/">
+    <!-- Main pages of the application -->
+    <file name="About.jsx" />
+    <file name="ContactPage.jsx" />
+    <file name="Footer.jsx" />
+    <file name="Home.jsx" />
+    <file name="Navbar.jsx" />
+    <file name="NotFound.jsx" />
+    <file name="Services.jsx" />
+  </folder>
+  <file name="App.jsx">
+    <!-- App routes and main layout -->
+  </file>
+  <file name="App.css">
+    <!-- Global styles -->
+  </file>
+  <file name="index.css">
+    <!-- Tailwind and custom styles -->
+  </file>
+  <file name="main.jsx">
+    <!-- Entry point -->
+  </file>
+</project>
 
 ✨ Features
 Fully responsive for mobile, tablet, and desktop.
