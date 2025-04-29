@@ -5,11 +5,33 @@ This is a fully responsive and elegant website providing event decoration servic
 
 🌟 Designed to deliver a professional, modern, and user-friendly experience.
 
+### Available Scripts 🛠️
+-In the project directory, you can run:
+-npm run dev 🚀
+-Runs the app in development mode. 🌟
+-Open http://localhost:3000 🌐 to view it in your browser.
+-The page will reload 🔄 when you make changes.
+-You may also see any lint errors in the console. 🚧
+-npm run build 📦
+-Builds the app for production to the build folder. 🏗️
+-It correctly bundles React in production mode 🔧 and optimizes the build for the best performance. 🌟
+
+### Technologies Used 💻
+- ⚛️ React
+- 🎨 Tailwind CSS for styling
+- 🌐 Custom API for mail
+
+### Learn More 📚
+-To learn React, check out the React documentation 🌟(https://react.dev/).
+-To learn more about Vite App, check out the Vite App documentation 📖(https://react.dev/learn/vite-app)
+
+### Deployment 🌎
+This app is deployed on Render. 🌐 Live URL: https://decorish-events.onrender.com/
+
+###  License 📜
+This project is licensed under the MIT License.
 ---
 
-## 🎬 Watch Demo
-
-[![Watch the demo](./src/assets/previewPhotos/decorish-video-button.png)](https://drive.google.com/file/d/1POoMxZqlAXwMaEO5jbJ4_-MvwadsS2Lw/view?usp=drive_link)
 
 ### 📸 Preview Images
 
@@ -45,3 +67,19 @@ This is a fully responsive and elegant website providing event decoration servic
   <file name="index.css" />
   <file name="main.jsx" />
 </project>
+
+### Features 🌟
+
+- 🐾 Browse a list of Pokémon with their names, images, and types.
+- 🔎 Search for Pokémon by name.
+- 🎯 Filter Pokémon by type.
+- 📜 View detailed information about a Pokémon in a popup.
+- 📱 Responsive design for mobile and desktop devices.
+
+![Beige New Product Mockup Now Available Facebook Post (1)](https://github.com/user-attachments/assets/8c25f8fe-d187-4eab-95fe-ebd3cc023f2b)
+
+
+
+### Demo Video 🎥
+[![Watch the demo](./src/assets/previewPhotos/decorish-video-button.png)](https://drive.google.com/file/d/1POoMxZqlAXwMaEO5jbJ4_-MvwadsS2Lw/view?usp=drive_link)
+## 🎬 Watch Demo
