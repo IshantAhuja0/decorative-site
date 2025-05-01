@@ -1,72 +1,67 @@
-# 🎉 Decorish Events Web App
+🎉 𝐃𝐞𝐜𝐨𝐫𝐢𝐬𝐡 𝐄𝐯𝐞𝐧𝐭𝐬 𝐖𝐞𝐛 𝐀𝐩𝐩
 
-Welcome to the **Decorish Events Solutions** website repository!  
-This is a fully responsive and elegant website providing event decoration services — including birthdays, anniversaries, farewells, and other celebrations.
+Welcome to the Decorish Events Solutions website repository!
 
-🌟 Designed to deliver a professional, modern, and user-friendly experience.
+A modern, responsive, and elegant website for booking event decoration services — including birthdays, anniversaries, farewells, and other special occasions.
 
-### Available Scripts 🛠️
--In the project directory, you can run:
--npm run dev 🚀
--Runs the app in development mode. 🌟
--Open http://localhost:3000 🌐 to view it in your browser.
--The page will reload 🔄 when you make changes.
--You may also see any lint errors in the console. 🚧
--npm run build 📦
--Builds the app for production to the build folder. 🏗️
--It correctly bundles React in production mode 🔧 and optimizes the build for the best performance. 🌟
+🌟 Crafted for a professional, aesthetic, and user-friendly experience.
 
-### Technologies Used 💻
-- ⚛️ React
-- 🎨 Tailwind CSS for styling
-- 🌐 Custom API for mail
+🚀 Live Demo
+🌐 Deployed on Render: Visit Live Site →  [Decorish Events](https://decorish-events.onrender.com)
 
-### Learn More 📚
--To learn React, check out the React documentation 🌟(https://react.dev/).
--To learn more about Vite App, check out the Vite App documentation 📖(https://react.dev/learn/vite-app)
-
-### Deployment 🌎
-This app is deployed on Render. 🌐 Live URL: https://decorish-events.onrender.com/
-
-###  License 📜
-This project is licensed under the MIT License.
----
+🎬 Watch Demo Video:
 
 
-### 📸 Preview Images
+📸 Preview Images
+<p float="left"> <img src="./src/assets/previewPhotos/photo1.png" width="30%" /> <img src="./src/assets/previewPhotos/photo2.png" width="30%" /> <img src="./src/assets/previewPhotos/photo3.png" width="30%" /> </p>
+🛠️ Available Scripts
+In the project directory, you can run:
 
-![Preview 1](./src/assets/previewPhotos/photo1.png)
-![Preview 2](./src/assets/previewPhotos/photo2.png)
-![Preview 3](./src/assets/previewPhotos/photo3.png)
+npm run dev 🚀
+Starts the development server.
+Open [Live Server](https://localhost:3000) to view in the browser.
+The page reloads automatically with saved changes and shows lint errors if any.
+
+npm run build 📦
+Builds the app for production in the dist/ folder.
+React is bundled in production mode and optimized for performance.
+
+💻 Technologies Used
+⚛️ React – Frontend JavaScript library
+
+🎨 Tailwind CSS – Utility-first CSS framework
+
+📧 Custom API – Used for sending emails/messages
+
+⚡ Vite – Fast build tool and dev server
 
 ---
 
 ## 📂 Project Structure
 
-```xml
-<project root="src/">
-  <folder name="assets/" />
-  <folder name="components/">
-    <folder name="about-section/" />
-    <folder name="hero-section/" />
-    <folder name="services-section/" />
-    <file name="GoogleMapPreview.jsx" />
-    <file name="Popup.jsx" />
-  </folder>
-  <folder name="main-components/">
-    <file name="About.jsx" />
-    <file name="ContactPage.jsx" />
-    <file name="Footer.jsx" />
-    <file name="Home.jsx" />
-    <file name="Navbar.jsx" />
-    <file name="NotFound.jsx" />
-    <file name="Services.jsx" />
-  </folder>
-  <file name="App.jsx" />
-  <file name="App.css" />
-  <file name="index.css" />
-  <file name="main.jsx" />
-</project>
+```text
+📦 src/
+├── 📁 assets/
+├── 📁 components/
+│ ├── 📁 about-section/
+│ ├── 📁 hero-section/
+│ ├── 📁 services-section/
+│ ├── 📄 GoogleMapPreview.jsx
+│ └── 📄 Popup.jsx
+├── 📁 main-components/
+│ ├── 📄 About.jsx
+│ ├── 📄 ContactPage.jsx
+│ ├── 📄 Footer.jsx
+│ ├── 📄 Home.jsx
+│ ├── 📄 Navbar.jsx
+│ ├── 📄 NotFound.jsx
+│ └── 📄 Services.jsx
+├── 📄 App.jsx
+├── 📄 App.css
+├── 📄 index.css
+└── 📄 main.jsx
+```
+
 
 ### Features 🌟
 
@@ -80,6 +75,6 @@ This project is licensed under the MIT License.
 
 
 
+## 🎬 Watch Demo
 ### Demo Video 🎥
 [![Watch the demo](./src/assets/previewPhotos/decorish-video-button.png)](https://drive.google.com/file/d/1POoMxZqlAXwMaEO5jbJ4_-MvwadsS2Lw/view?usp=drive_link)
-## 🎬 Watch Demo
