@@ -77,4 +77,4 @@ React is bundled in production mode and optimized for performance.
 
 ## 🎬 Watch Demo
 ### Demo Video 🎥
-[![Watch the demo](./src/assets/previewPhotos/decorish-video-button.png)](https://drive.google.com/file/d/1POoMxZqlAXwMaEO5jbJ4_-MvwadsS2Lw/view?usp=drive_link)
+[![Watch the demo](https://i.postimg.cc/0jsxNDd8/another-Demo.png)](https://drive.google.com/file/d/1POoMxZqlAXwMaEO5jbJ4_-MvwadsS2Lw/view?usp=drive_link)
