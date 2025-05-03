@@ -40,9 +40,9 @@ const Footer = (props) => {
           <div>
             <h3 className="text-md font-semibold text-white mb-2">Follow Us</h3>
             <div className="flex gap-4 mt-2">
-              <NavLink href="#" className="text-gray-400 hover:text-white"><FaFacebookF /></NavLink>
-              <NavLink href="https://www.instagram.com/decorish_events/" className="text-gray-400 hover:text-white"><FaInstagram /></NavLink>
-              <NavLink href="#" className="text-gray-400 hover:text-white"><FaYoutube /></NavLink>
+              <a href="#" className="text-gray-400 hover:text-white"><FaFacebookF /></a>
+              <a href="https://www.instagram.com/decorish_events/" className="text-gray-400 hover:text-white"><FaInstagram /></a>
+              <a href="#" className="text-gray-400 hover:text-white"><FaYoutube /></a>
             </div>
           </div>
         </div>
