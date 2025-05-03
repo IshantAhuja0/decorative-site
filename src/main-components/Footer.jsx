@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF,  FaInstagram, FaYoutube } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 const Footer = (props) => {
   return (
@@ -41,9 +41,8 @@ const Footer = (props) => {
             <h3 className="text-md font-semibold text-white mb-2">Follow Us</h3>
             <div className="flex gap-4 mt-2">
               <NavLink href="#" className="text-gray-400 hover:text-white"><FaFacebookF /></NavLink>
-              <NavLink href="#" className="text-gray-400 hover:text-white"><FaTwitter /></NavLink>
               <NavLink href="https://www.instagram.com/decorish_events/" className="text-gray-400 hover:text-white"><FaInstagram /></NavLink>
-              <NavLink href="#" className="text-gray-400 hover:text-white"><FaLinkedinIn /></NavLink>
+              <NavLink href="#" className="text-gray-400 hover:text-white"><FaYoutube /></NavLink>
             </div>
           </div>
         </div>

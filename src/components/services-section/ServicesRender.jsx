@@ -86,7 +86,7 @@ const CategoryCard = ({ data, reverse }) => {
     return () => observer.disconnect();
   }, []);
 
-  const previewImages = [data.img, data.img, data.img, data.img];
+  const previewImages = data.photos;
 
   return (
     <section className="overflow-hidden" id={data.title}>

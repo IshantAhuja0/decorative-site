@@ -46,7 +46,13 @@ export default function Navbar(props) {
             <a
               type="button"
               href={props.details.instagram}
-              className="bg-amber-50 p-2 rounded-2xl text-3xl hover:bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 hover:text-amber-50 transition duration-300"
+              className="instagram-gradient text-white p-2 rounded-2xl text-3xl transition duration-300 
+              sm:bg-white sm:text-white sm:hover:instagram-gradient sm:hover:text-black"
+  
+  
+  
+  
+  
             >
               <FaInstagram />
             </a>

@@ -2,39 +2,39 @@ import React from 'react';
 
 const testimonials = [
   {
-    name: "Amit Sharma",
-    comment: "Amazing service! Totally satisfied with the experience.",
-    location: "Mumbai, India",
+    name: "Khushboo Bansal",
+    comment: "Best event planner👍👍 the creativity nd ideas are very unique🤩🤩must visit.",
+    location: "Sirsa, Haryana",
     image: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
-    name: "Sara Khan",
-    comment: "Quick delivery and great support. Highly recommend!",
-    location: "Delhi, India",
+    name: "Sachin Kochar",
+    comment: "I got my house decorated from Decorish Events for my wedding rituals and it came out to be a fabulous decor . Much recommended!",
+    location: "Sirsa, Haryana",
     image: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
-    name: "John Doe",
-    comment: "Very professional and helpful team. 5 stars!",
-    location: "Bangalore, India",
+    name: "Aakarshita Lakhotia",
+    comment: "Amazingly Beautiful Setup by Decorish Events 💕 Best one in Sirsa✨💕",
+    location: "BanSirsa, Haryana",
     image: "https://randomuser.me/api/portraits/men/51.jpg"
   },
   {
-    name: "Amit Sharma",
-    comment: "Amazing service! Totally satisfied with the experience.",
-    location: "Mumbai, India",
+    name: "Riya Gupta",
+    comment: "To one of the best decor team in the city, always comes up with innovative ideas and provides hustle free services.",
+    location: "Sirsa, Haryana",
     image: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
-    name: "Sara Khan",
-    comment: "Quick delivery and great support. Highly recommend!",
-    location: "Delhi, India",
+    name: "Shubham Bansal",
+    comment: "Everyone keeps telling us how epic the event was. It really was! Thank you for flawlessly executing our vision😍😍",
+    location: "Sirsa, Haryana",
     image: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
-    name: "John Doe",
-    comment: "Very professional and helpful team. 5 stars!",
-    location: "Bangalore, India",
+    name: "Kanika Bagri",
+    comment: "One of the best decor planners..Elevating the ideas with unique designs & always upgrading themselves.",
+    location: "BanSirsa, Haryana",
     image: "https://randomuser.me/api/portraits/men/51.jpg"
   },
 
