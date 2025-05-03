@@ -20,6 +20,14 @@ A modern, responsive, and elegant platform for booking **event decoration servic
   <img src="./src/assets/previewPhotos/photo3.png" width="30%" />
 </p>
 
+ ## 📱 Responsive Design Showcase
+ 
+<p float="left">
+  <img src="https://i.postimg.cc/wBby00bx/flat-devices-mockup.png" width="80%" />
+</p>
+
+Our design adapts beautifully across all screen sizes: desktop, tablet, and mobile.
+
 ---
 
 ## 🛠️ Available Scripts
