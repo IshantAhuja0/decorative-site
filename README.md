@@ -128,5 +128,5 @@ This project is licensed under the MIT License.
 📞 Contact
 For queries or feedback:
 📧 decorish.events@gmail.com
-📸 Follow us on Instagram
+📸 Follow us on Instagram 
 
