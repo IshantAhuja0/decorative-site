@@ -8,12 +8,12 @@ function navInstaReel(e){
 const reels = [
   {
     title: "Wedding Decor Highlights",
-    videoUrl: "https://media-hosting.imagekit.io/371166b1754c4968/reel2.mp4?Expires=1839692014&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=by0CGYDbCrW0WMakezsZFw63qHqlB8s2Sbz5LTEC-~Qq4MGr1jpTTVrE5w6HZh7BWBCEOxjuUcIArqW877HqVOkdiel1onlDjaCqibrIGC~Hps0Sh-3SgP1Db3aoqJHBdl7r576jyS1LNPMggXK8B~HQDZPaUaoBcyw-xhBJCT~RY-U~LZBzCRjmVuYXqrwj3liluO1V78ncvmBIbFCe0xUDngJIOZJQKIqgQOhTrfl65TTPGjzo~78lIUfIFOlg3NzPOdw8glOGgBXBmVGdTlI3g2lMZ8ql47Zry~asSaYlCxa1Kbl7SrgU7Sl-Th8QX9aW487Ean52HLUuQqeniQ__",
+    videoUrl: "https://ik.imagekit.io/jdja9elpv/AQN8Y7xMGM1uH9V5rLiW5_vnNuRC-Q-tfP1eXRo-BX5kejf9jRcY8CUksvKdho7ZEstZChf39DqXA2UwspqpuA0EwqyjthMVUeoynRk.mp4?updatedAt=1747568704733",
     instaUrl:"https://www.instagram.com/reel/DGdYG43N0FO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     title: "Birthday Bash Vibes",
-    videoUrl: "https://media-hosting.imagekit.io/e1523530807d4724/reel1.mp4?Expires=1839691643&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=o~YfNA3ThQv8KXAzP7d-xgvnNK9YkY1ddxAHufQ~dEJE3JVR8eQ07shINf9Xs0YbgKdYJ6HHA2AZGXd5LXjcNYvHbK1xE9aSANh94pOSq9XaJSne1tYe2jP8AqVklR5ZO33d25zjokQi3r1GxiKM33tFm2H1FZXi7FPNRDUS3PO3BIoxIoIWz9PYbK4dowA201gUGtmCN4g34bERrcppYZWX9ObLahYxWM9AEz7VKiz8VKfAnETdanpXcLw8UnNjdJAa0t-ABVdpgxhVpS32yw6SnwKG5hv3ZAkQ7GcT~rwyKODn7p9EoRlBLeAJu60cBUEPOPOJ9mjaHFiIT6HiqA__",
+    videoUrl: "https://ik.imagekit.io/jdja9elpv/AQN8Y7xMGM1uH9V5rLiW5_vnNuRC-Q-tfP1eXRo-BX5kejf9jRcY8CUksvKdho7ZEstZChf39DqXA2UwspqpuA0EwqyjthMVUeoynRk.mp4?updatedAt=1747568704733",
     instaUrl:"https://www.instagram.com/reel/DIZT_4lzlmN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
@@ -40,15 +40,15 @@ const reels = [
 
 
 const InstagramReel = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://www.instagram.com/embed.js";
-    script.async = true;
-    script.onload = () => {
-      if (window.instgrm) window.instgrm.Embeds.process();
-    };
-    document.body.appendChild(script);
-  }, []);
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://www.instagram.com/embed.js";
+  //   script.async = true;
+  //   script.onload = () => {
+  //     if (window.instgrm) window.instgrm.Embeds.process();
+  //   };
+  //   document.body.appendChild(script);
+  // }, []);
 
   return (
     <div className="px-4 py-16 max-w-7xl mx-auto">

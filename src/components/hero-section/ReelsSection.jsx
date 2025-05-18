@@ -5,33 +5,33 @@ import { motion } from "framer-motion";
 const reels = [
   {
     title: "Wedding Decor Highlights",
-    videoUrl: "https://media-hosting.imagekit.io/371166b1754c4968/reel2.mp4?Expires=1839692014&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=by0CGYDbCrW0WMakezsZFw63qHqlB8s2Sbz5LTEC-~Qq4MGr1jpTTVrE5w6HZh7BWBCEOxjuUcIArqW877HqVOkdiel1onlDjaCqibrIGC~Hps0Sh-3SgP1Db3aoqJHBdl7r576jyS1LNPMggXK8B~HQDZPaUaoBcyw-xhBJCT~RY-U~LZBzCRjmVuYXqrwj3liluO1V78ncvmBIbFCe0xUDngJIOZJQKIqgQOhTrfl65TTPGjzo~78lIUfIFOlg3NzPOdw8glOGgBXBmVGdTlI3g2lMZ8ql47Zry~asSaYlCxa1Kbl7SrgU7Sl-Th8QX9aW487Ean52HLUuQqeniQ__",
+    videoUrl: "https://ik.imagekit.io/jdja9elpv/AQN8Y7xMGM1uH9V5rLiW5_vnNuRC-Q-tfP1eXRo-BX5kejf9jRcY8CUksvKdho7ZEstZChf39DqXA2UwspqpuA0EwqyjthMVUeoynRk.mp4?updatedAt=1747568704733",
     instaUrl:"https://www.instagram.com/reel/DGdYG43N0FO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     //this is not working we have to replace it
     title: "Birthday Bash Vibes",
-    videoUrl: "https://media-hosting.imagekit.io/e1523530807d4724/reel1.mp4?Expires=1839691643&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=o~YfNA3ThQv8KXAzP7d-xgvnNK9YkY1ddxAHufQ~dEJE3JVR8eQ07shINf9Xs0YbgKdYJ6HHA2AZGXd5LXjcNYvHbK1xE9aSANh94pOSq9XaJSne1tYe2jP8AqVklR5ZO33d25zjokQi3r1GxiKM33tFm2H1FZXi7FPNRDUS3PO3BIoxIoIWz9PYbK4dowA201gUGtmCN4g34bERrcppYZWX9ObLahYxWM9AEz7VKiz8VKfAnETdanpXcLw8UnNjdJAa0t-ABVdpgxhVpS32yw6SnwKG5hv3ZAkQ7GcT~rwyKODn7p9EoRlBLeAJu60cBUEPOPOJ9mjaHFiIT6HiqA__",
+    videoUrl: "https://ik.imagekit.io/jdja9elpv/AQOL97oGDg_sX3BwtOJnRBESog-VNEN0J_mTUVBH3RwaSYfv8o_tRqWytF65g3Wq2VgxZOhTz8rZeHI8p87lJMMKxg8ArZMJgAFpehg.mp4?updatedAt=1747569287754",
     instaUrl:"https://www.instagram.com/reel/DIZT_4lzlmN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     title: "Corporate Gala Snapshots",
-    videoUrl: "https://media-hosting.imagekit.io/77f16091bfac4ac4/reel3.mp4?Expires=1839692215&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Mr1QnZuj5jnYADyEZIu3y1paOXv34sBlQ08l9Vb1SQPLJlVcm0M5xQlIV0SWFj6oybycQLS6kg4vC3JYEXvQh4woruV1xCwY1a7cLrtKh2E52PPEAlW2iPWbgE6P0WHmX7UETLsXl-zmHg8Ttaf0OT5D42bxfR8QJUNiKC5Y0rp8sZXnetAbESKDqi-fX4XsvSv6cBJlOetjbQ46Buywf3ocSaZ1AA0cpuxvoUQH26uCJU4K1yg2JigGtRTqfOlnG1VqOw1wbId8tC~18TkuUlD2yyTiN-33VQQdfxL7Z6yzDuxLsBb5N571QYIIPOgG11LHhG9G6khPjbhLMg76rg__",
+    videoUrl: "https://ik.imagekit.io/jdja9elpv/AQOjLO9l8DUeHAif-ort3YPZ9DQYy-VFK3nVhDknZjHcHVo6mNNHjaAPL51PaC9JNpxBgUMgZ5YLONX6Qd3n4lAG9U712pY5SljJxCw.mp4?updatedAt=1747569627382",
     instUrl:"https://www.instagram.com/reel/DGTJmIuTzdK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     title: "Wedding Glimpse",
-    videoUrl: "https://media-hosting.imagekit.io/2524923913d24833/reel4.mp4?Expires=1839692228&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=kjIL~zw6tM3pyvJU9mhdi~i3tO4QPa3HzoDTnOtMrvCaa3z4v7k0ZpSFb4lbSpE-~OdkoOeAoycIKBwJ8s7fxyx31V8n8OYWqRQNoYq4Jtj1j2rJumhpVQ23QzFPmimMX9D7qkH9T2O0rwWlyGZsz7kXgKiVu4J7wX-jFkBkGRoPZnQafG9WHCG6i~AQV-AUE6cR1XaVc5z9y79h3tgmpn1u~J~CQdwtMN3fwuMRAn9rtlrE9Hbu57RpIzLNimr36~CJ6gvYuZPCg-M6M66T~eTK4esA540AAWX0kpQyYG-1dozFp5kungSICpnQh6OxGHYOjTLgp3paiIxEgfFqDA__",
+    videoUrl: "https://ik.imagekit.io/jdja9elpv/AQOL97oGDg_sX3BwtOJnRBESog-VNEN0J_mTUVBH3RwaSYfv8o_tRqWytF65g3Wq2VgxZOhTz8rZeHI8p87lJMMKxg8ArZMJgAFpehg%20(1).mp4?updatedAt=1747569752498",
     instaUrl:"https://www.instagram.com/reel/DIZT_4lzlmN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     title: "Stage Entry Vibe",
-    videoUrl: "https://media-hosting.imagekit.io/f015139e9fce40ec/reel5.mp4?Expires=1839692235&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=HWGBovXOScgzYkQRXkPVa-yATtt91JX1V513atE1TTFUEKWDff6vGFAk--t3ZIZbwz2KVW~OS1opXCg6KnS5-WyXEjcIltO8Ue~sd8Wopyz1Rek4XpCXqcZqY~N14wYghzRCTR9iXLcy-e2vpTYIHp63NXdS3mJz3eR~kqMP3Kt54utCtZksMyXwqEvNbmPGYLevFvA8s7XX39QM8iA4zaPKVLdlUrqrnRe7ox5sn2ars8IV3MFYX~uOWwKCXvQESHnJb7-nxLF~rWiE1kx278fJ-H8yyp5KumHBB0TgS8iAT3ezfS6yKkv44q8rS273g0T5wJoc4HOQIw3G-hMW6Q__",
+    videoUrl: "https://ik.imagekit.io/jdja9elpv/AQNFIhJG3OBh7T2FuDQ2jVsFjGD5mxvYVdFb3pR6bsdSN2tzl2LxbyzS-DWu3U0DWAcrPws-CjYsQCEyCEWptjv7ejv8Sgy31KIpUiY.mp4?updatedAt=1747569889589",
     instaUrl:"https://www.instagram.com/reel/DGBQAKUzuTr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     title: "Decor Timelapse",
-    videoUrl: "https://media-hosting.imagekit.io/a43c4ecea6a148f1/reel6.mp4?Expires=1839692244&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=tZJv2pNLDqy1C3JcTe8WggvxdDKOd7LtqBA-Vk8pUwsb9mi4VC9KJMRhUrEWcLYEZL0TkVxd51pRj44t3Pw4NOmiys4fRCRaR8hEEJ6syL9C46gcsMqIslSC5tZPSWLaCbFubWLj6rNJvt-KOf430vSsj6zRa-4zDfnE5TD~50Ia9wP4YEKhdZjmqkPyPkcK2gc9vPbBODuWgc3cRZj2cwfxZwJJ7VMeGH3tnDAz71Dk0B~F3QTEZL2be-Jlcm-K11zXvEB-rrIGjMXXy2qhviMuTBNCSlMVKd3eNlqNp1PNzqO2EzYiuPig~C7U7ngu5-5t6qI24CboBOEn-GC1IA__",
+    videoUrl: "https://ik.imagekit.io/jdja9elpv/indownloader.app_video_0635706001747570011.mp4?updatedAt=1747570041912",
     instaUrl:"https://www.instagram.com/reel/DGFaZ1Hx3Xj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
 ];
