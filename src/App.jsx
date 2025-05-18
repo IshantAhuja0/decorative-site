@@ -1,7 +1,7 @@
 import { Suspense, useState } from 'react'
 import './App.css'
 import Navbar from './main-components/Navbar'
-import Footer from './main-components/Footer'
+import Footer from './Footer'
 import { Outlet } from 'react-router-dom'
 function App() {
   const [count, setCount] = useState(0)
@@ -31,7 +31,6 @@ function App() {
 }>
   <Outlet />
 </Suspense>
-
 
   <Footer detail={footerDetails}/> 
     </>
