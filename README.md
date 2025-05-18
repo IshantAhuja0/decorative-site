@@ -3,7 +3,7 @@
 Welcome to the **Decorish Events Solutions** website repository!  
 A modern, responsive, and elegant platform for booking **event decoration services** — including **birthdays**, **anniversaries**, **farewells**, and other special occasions.
 
-🌟 Designed for a professional, aesthetic, and seamless user experience.
+🌟 Designed for a professional, aesthetic, and seamless user experience. 
 
 ---
 
@@ -128,5 +128,5 @@ This project is licensed under the MIT License.
 📞 Contact
 For queries or feedback:
 📧 decorish.events@gmail.com
-📸 Follow us on Instagram
+📸 Follow us on Instagram 
 
